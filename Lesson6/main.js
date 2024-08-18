@@ -52,7 +52,13 @@ const suits = ['♠', '♣', '♥', '♦'];
     const cards = [];
     for (const suit of suits) {
         for (const value of values) {
-            cards.push({ value, suit });
+            const card = { value, suit };
+            if (suit === '♥' || suit === '♦') {
+                card.color = 'red';
+            } else {
+                card.color = 'black';
+            }
+            cards.push(card);
         }
     }
 console.log(cards)
