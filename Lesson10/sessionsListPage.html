@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="sessionsList"></div>
+    <script>
+        const sessions = JSON.parse(localStorage.getItem('sessionsList')) || [];
+        document.getElementById('sessionsList').innerHTML = sessions.map(s => `<div>${s}</div>`).join('');
+    </script>
+</body>
+</html>

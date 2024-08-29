@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const sessions = JSON.parse(localStorage.getItem('sessionsList')) || [];
+    sessions.push(new Date().toLocaleString());
+    localStorage.setItem('sessionsList', JSON.stringify(sessions));
+</script>
+</body>
+</html>
